@@ -4,6 +4,11 @@
 
 - 对象捕获
 - 对象重建
+
+```bash
+brew tap orzgeeker/core & brew install objectcreate3d
+```
+
 - 户型重建
 
 # 相关链接
