@@ -1,8 +1,15 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
+# Creating a Photogrammetry Command-Line App
 
-Abstract:
-RealityKit Object Creation command line tools.
+Generate 3D objects from images using RealityKit Object Capture.
+
+## Overview
+
+- Note: This sample code project is associated with WWDC21 session [10076: Create 3D Models with Object Capture](https://developer.apple.com/wwdc21/10076/).
+
+## Abstract
+
+ RealityKit Object Creation command line tools.
 */
 
 import ArgumentParser  // Available from Apple: https://github.com/apple/swift-argument-parser
