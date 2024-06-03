@@ -355,7 +355,9 @@ class CameraViewModel: ObservableObject {
             }
 
             // Turn on high-resolution, depth data, and quality prioritzation mode.
-            photoSettings.isHighResolutionPhotoEnabled = true
+            if let maxPhotoDimension = self.maxPhotoDimensions {
+                photoSettings.maxPhotoDimensions = maxPhotoDimension
+            }
             photoSettings.isDepthDataDeliveryEnabled = self.photoOutput.isDepthDataDeliveryEnabled
             photoSettings.photoQualityPrioritization = self.photoQualityPrioritizationMode
 
@@ -382,7 +384,7 @@ class CameraViewModel: ObservableObject {
             ]
 
             DispatchQueue.main.async {
-                self.isHighQualityMode = photoSettings.isHighResolutionPhotoEnabled
+                self.isHighQualityMode = photoSettings.maxPhotoDimensions == self.maxPhotoDimensions
                     && photoSettings.photoQualityPrioritization == .quality
             }
 
@@ -482,6 +484,16 @@ class CameraViewModel: ObservableObject {
         }
     }
 
+    var maxPhotoDimensions: CMVideoDimensions? {
+        guard let maxPhotoDimension = videoDeviceInput?.device.activeFormat.supportedMaxPhotoDimensions.max(by: { d1, d2 in
+            return d1.width * d1.height < d2.width * d2.height
+        })
+        else {
+            return nil
+        }
+        return maxPhotoDimension
+    }
+
     private func configureSession() {
         // Make sure setup hasn't failed.
         guard setupResult == .inProgress else {
@@ -524,7 +536,7 @@ class CameraViewModel: ObservableObject {
         // Set the observed property so that depth data is available on the main thread.
         DispatchQueue.main.async {
             self.isDepthDataEnabled = self.photoOutput.isDepthDataDeliveryEnabled
-            self.isHighQualityMode = self.photoOutput.isHighResolutionCaptureEnabled
+            self.isHighQualityMode = self.photoOutput.maxPhotoDimensions == self.maxPhotoDimensions
                 && self.photoOutput.maxPhotoQualityPrioritization == .quality
         }
 
@@ -538,7 +550,9 @@ class CameraViewModel: ObservableObject {
             session.addOutput(photoOutput)
 
             // Prefer high resolution and maximum quality, with depth.
-            photoOutput.isHighResolutionCaptureEnabled = true
+            if let maxPhotoDimensions {
+                photoOutput.maxPhotoDimensions = maxPhotoDimensions
+            }
             photoOutput.isDepthDataDeliveryEnabled = photoOutput.isDepthDataDeliverySupported
             photoOutput.maxPhotoQualityPrioritization = .quality
         } else {
@@ -574,4 +588,9 @@ class CameraViewModel: ObservableObject {
         }
         return videoDevice
     }
+}
+
+extension CMVideoDimensions: Equatable {
+
+    public static func == (lhs: CMVideoDimensions, rhs: CMVideoDimensions) -> Bool { lhs.width == rhs.width && lhs.height == rhs.height }
 }
