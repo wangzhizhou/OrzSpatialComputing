@@ -33,8 +33,11 @@ class AsyncImageStore: ObservableObject {
     /// When the store begins loading images, it publishes `loadingImage`. If the store fails to load
     /// the thumbnail or image, it publishes `errorImage`. The store doesn't start loading an image
     /// until the first time your code accesses one of the image properties.
-    init(url: URL, loadingImage: UIImage = UIImage(systemName: "questionmark.circle")!,
-         errorImage: UIImage = UIImage(systemName: "xmark.circle")!) {
+    init(
+        url: URL,
+        loadingImage: UIImage = UIImage(systemName: "questionmark.circle")!,
+        errorImage: UIImage = UIImage(systemName: "xmark.circle")!
+    ) {
         self.url = url
         self.thumbnailImage = loadingImage
         self.image = loadingImage

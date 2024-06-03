@@ -91,3 +91,6 @@ iOSInjectionProject/
 .DS_Store
 Samples/CreatingAPhotogrammetryCommandLineApp/Data
 .swiftpm/
+Derived/
+Workspace.xcworkspace/
+OrzSpatialComputing.xcodeproj/

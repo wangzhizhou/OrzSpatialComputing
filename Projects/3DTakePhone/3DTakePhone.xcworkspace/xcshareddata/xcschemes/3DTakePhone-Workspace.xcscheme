@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1540"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C9E38E0E25C8CB5B00171AB3"
-               BuildableName = "CaptureSample.app"
-               BlueprintName = "CaptureSample"
-               ReferencedContainer = "container:CaptureSample.xcodeproj">
+               BlueprintIdentifier = "DC6499D87529CA8335C929CC"
+               BuildableName = "Capture.app"
+               BlueprintName = "Capture"
+               ReferencedContainer = "container:3DTakePhone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,15 +44,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C9E38E0E25C8CB5B00171AB3"
-            BuildableName = "CaptureSample.app"
-            BlueprintName = "CaptureSample"
-            ReferencedContainer = "container:CaptureSample.xcodeproj">
+            BlueprintIdentifier = "DC6499D87529CA8335C929CC"
+            BuildableName = "Capture.app"
+            BlueprintName = "Capture"
+            ReferencedContainer = "container:3DTakePhone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C9E38E0E25C8CB5B00171AB3"
-            BuildableName = "CaptureSample.app"
-            BlueprintName = "CaptureSample"
-            ReferencedContainer = "container:CaptureSample.xcodeproj">
+            BlueprintIdentifier = "DC6499D87529CA8335C929CC"
+            BuildableName = "Capture.app"
+            BlueprintName = "Capture"
+            ReferencedContainer = "container:3DTakePhone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -72,7 +72,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
