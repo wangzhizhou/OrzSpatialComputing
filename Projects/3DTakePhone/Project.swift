@@ -13,7 +13,7 @@ let project = Project(
             bundleId: "com.joker.take.photo.for.3d.object",
             infoPlist: .extendingDefault(with: [
                 "UILaunchStoryboardName": "",
-                "NSCameraUsageDescription": "CaptureSample uses the camera to take photos and preview video."
+                "NSCameraUsageDescription": "CaptureSample uses the camera to take photos and preview video.",
             ]),
             sources: ["Capture/Sources/**"],
             resources: ["Capture/Resources/**"],
