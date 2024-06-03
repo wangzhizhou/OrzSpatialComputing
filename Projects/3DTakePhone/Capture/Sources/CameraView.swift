@@ -15,7 +15,6 @@ struct CameraView: View {
     @ObservedObject var model: CameraViewModel
     @State private var showInfo: Bool = false
     
-    let aspectRatio: CGFloat = 4.0 / 3.0
     let previewCornerRadius: CGFloat = 15.0
     
     var body: some View {
@@ -31,7 +30,7 @@ struct CameraView: View {
                         Spacer()
                         CameraPreviewView(session: model.session)
                             .frame(width: geometryReader.size.width,
-                                   height: geometryReader.size.width * aspectRatio,
+                                   height: geometryReader.size.height,
                                    alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: previewCornerRadius))
                             .onAppear { model.startSession() }
@@ -54,6 +53,7 @@ struct CameraView: View {
                         }
                         Spacer()
                         CaptureButtonPanelView(model: model, width: geometryReader.size.width)
+                            .padding([.bottom])
                     }
                 }
             }

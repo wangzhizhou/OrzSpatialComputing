@@ -14,6 +14,13 @@ let project = Project(
             infoPlist: .extendingDefault(with: [
                 "UILaunchStoryboardName": "",
                 "NSCameraUsageDescription": "CaptureSample uses the camera to take photos and preview video.",
+                "UISupportedInterfaceOrientations": [
+                    "UIInterfaceOrientationPortrait"
+                ],
+                "UISupportedInterfaceOrientations~ipad":[
+                    "UIInterfaceOrientationPortrait"
+                ],
+                "UIRequiresFullScreen": true,
             ]),
             sources: ["Capture/Sources/**"],
             resources: ["Capture/Resources/**"],
