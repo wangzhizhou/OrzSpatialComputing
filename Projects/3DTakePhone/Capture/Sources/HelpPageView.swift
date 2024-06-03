@@ -20,7 +20,6 @@ struct HelpPageView: View {
             .tabViewStyle(PageTabViewStyle())
         }
         .navigationTitle("Scanning Info")
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -19,7 +19,7 @@ struct CameraView: View {
     let previewCornerRadius: CGFloat = 15.0
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             GeometryReader { geometryReader in
                 // Place the CameraPreviewView at the bottom of the stack.
                 ZStack {

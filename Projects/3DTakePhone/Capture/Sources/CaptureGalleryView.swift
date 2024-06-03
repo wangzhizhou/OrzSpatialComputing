@@ -49,16 +49,7 @@ struct CaptureGalleryView: View {
     
     var body: some View {
         ZStack {
-            Color(red: 0, green: 0, blue: 0.01, opacity: 1).ignoresSafeArea(.all)
-            
-            // Create a hidden navigation link for the toolbar item.
-            NavigationLink(destination: CaptureFoldersView(model: model),
-                           isActive: self.$showCaptureFolderView) {
-                EmptyView()
-            }
-            .frame(width: 0, height: 0)
-            .disabled(true)
-            
+            Color(red: 0, green: 0, blue: 0.01, opacity: 1).ignoresSafeArea(.all)            
             GeometryReader { geometryReader in
                 ScrollView() {
                     LazyVGrid(columns: portraitLayout, spacing: columnSpacing) {
@@ -112,6 +103,9 @@ struct CaptureGalleryView: View {
                 }
             }
         })
+        .navigationDestination(isPresented: $showCaptureFolderView) {
+            CaptureFoldersView(model: model)
+        }
     }
 }
 
