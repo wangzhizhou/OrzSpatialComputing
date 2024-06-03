@@ -3,10 +3,20 @@
 空间计算相关的各种探索
 
 - 对象捕获
-- 对象重建
+
+Xcode工具项目生成：
 
 ```bash
-brew tap orzgeeker/core & brew install objectcreate3d
+brew tap tuist/tuist && brew install tuist
+cd Projects/3DTakePhone && tuist generate
+```
+
+- 对象重建
+
+macOS安装命令行对象重建工具：
+
+```bash
+brew tap orzgeeker/core && brew install objectcreate3d
 ```
 
 - 户型重建
