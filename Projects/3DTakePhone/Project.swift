@@ -3,7 +3,7 @@ import ProjectDescription
 let project = Project(
     name: "3DTakePhone",
     settings: .settings(configurations: [
-        .debug(name: "Debug", xcconfig: "Capture.xcconfig")
+        .debug(name: "Debug", xcconfig: "Capture/Debug.xcconfig")
     ]),
     targets: [
         .target(

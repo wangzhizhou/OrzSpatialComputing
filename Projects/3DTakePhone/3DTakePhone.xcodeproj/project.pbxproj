@@ -50,7 +50,6 @@
 		1D9C1F7A9534A29650084955 /* AsyncImageHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageHelpers.swift; sourceTree = "<group>"; };
 		33500B4F3D6E1A3D8A5648B3 /* CaptureFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureFoldersView.swift; sourceTree = "<group>"; };
 		398C0383FB903C008488298B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		55039B0D03CA6FAF6E9EB9C7 /* Capture.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Capture.xcconfig; sourceTree = "<group>"; };
 		57988B233F4EB3439EA95785 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		7A88EADBC8E69C983C35A9B1 /* CaptureSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSampleApp.swift; sourceTree = "<group>"; };
 		8E8CBE575BB24E2F216C6254 /* TuistAssets+Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Capture.swift"; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		B82D4E36A29EF14A16BF243F /* TriggerEveryTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerEveryTimer.swift; sourceTree = "<group>"; };
 		BD9592273E7AA93B7880E026 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		C135DB8CAA3D011356747AC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C4623242FA6C86B20AF78192 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C6E0BB9E2E238C9A758C8AD5 /* CaptureFolderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureFolderState.swift; sourceTree = "<group>"; };
 		CD80DCF7BDF0068934959876 /* Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2785FE54A5338B4BD592142 /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 			children = (
 				9CDA4D17FE21E3CECEB0DE1B /* Capture */,
 				CF725B9FDD70EAAA4B503E89 /* Derived */,
-				55039B0D03CA6FAF6E9EB9C7 /* Capture.xcconfig */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -154,6 +153,7 @@
 			children = (
 				77A503080943F0F916FBFAFF /* Resources */,
 				6E4285C5509DCDFAAFE65D9D /* Sources */,
+				C4623242FA6C86B20AF78192 /* Debug.xcconfig */,
 			);
 			path = Capture;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 		};
 		7710BDDA0DF66AE10D11CBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55039B0D03CA6FAF6E9EB9C7 /* Capture.xcconfig */;
+			baseConfigurationReference = C4623242FA6C86B20AF78192 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
